@@ -1,1 +1,2 @@
-# covid-21predictor-gateway
+# gateway
+spring security with UI for prediction reports

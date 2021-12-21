@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <meta charset="ISO-8859-1">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Covid Prediction System</title>
+        <!-- Favicon-->
+        <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    <title>List Reports</title>   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+    
+</head>
+<body id="page-top">
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+ <!-- Navigation-->
+ 
+ 
+ 
+ 
+<div>
+<nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container px-4 px-xl-7">
+        <a style="font-size: 40px ;color:black;" class="navbar-brand" href="#page-top">Covid Prediction System</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+        	
+            <ul class="navbar-nav ms-auto my-2 my-lg-0" style="font-size: 40px !important;" >
+ 
+                <li class="nav-item"><a><b></b></a> <li>
+                <li class="nav-item"><a style="font-size: 20px; color:black" class="nav-link" th:href="@{/index}">Home</a></li>
+                
+                </ul>    
+               <ul>          
+            	<!--  <button type="button" class="btn btn-dark">Welcome [[${#request.userPrincipal.principal.fullName}]]</button>  </li>  -->
+        		  <form th:action="@{/logout}" method="post">
+        			 <input class="btn btn-dark" type="submit" value="Sign Out" />
+    			 </form> 
+     
+        	  </ul>
+        </div>
+    </div>
+</nav>
+</div>
+
+<div style="margin-top:200px"></div>
+
+ <canvas id="pie-chart" width="400" height="450"></canvas>
+    
+    
+
+
+ 
+    
+    
+
+        <!-- Core theme JS-->
+        <script  th:inline="javascript">
+		    var south =  /*[[${south}]]*/ 'default';
+		    var  north =  /*[[${north}]]*/ 'default';
+		    var center =  /*[[${center}]]*/ 'default';
+		</script>
+        <script src="js/area_report.js"  ></script>
+</body>
+</html>
+
+
+
+
