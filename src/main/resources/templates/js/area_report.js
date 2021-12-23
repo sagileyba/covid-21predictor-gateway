@@ -3,8 +3,6 @@
  */
 
 
-
-
 /* PIE CHART */
 
 new Chart(document.getElementById("pie-chart"), {

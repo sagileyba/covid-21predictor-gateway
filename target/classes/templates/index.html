@@ -29,7 +29,7 @@ lang="en">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-xl-7">
-                <a style="font-size: 40px" class="navbar-brand" href="#page-top">Covid Prediction System</a>
+                <a style="font-size: calc(2vw + 2vh)" class="navbar-brand" href="#page-top">Covid Prediction System</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                 	
@@ -37,15 +37,18 @@ lang="en">
 					    
                         <li class="nav-item"><a style="font-size: 20px" class="nav-link" href="#page-top">About</a></li>
                         <li class="nav-item"><a style="font-size: 20px" class="nav-link" href="#reports">reports</a></li>
-                   <!--  <li class="nav-item"><a style="font-size: 20px" class="nav-link" href="#portfolio">Portfolio</a></li>  -->    
                         <li class="nav-item"><a style="font-size: 20px" class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item">
+                        <form th:action="@{/logout}" method="post">
+					            <input  style="font-size: 20px;" class="nav-link-btn  btn btn-dark" type="submit" value="Sign Out" />
+				         </form> 
+                        </li>
+                        
                         <li class="nav-item"><a><b></b></a> <li>
                         </ul>    
                        <ul>          
                     	<!--  <button type="button" class="btn btn-dark">Welcome [[${#request.userPrincipal.principal.fullName}]]</button>  </li>  -->
-                		  <form th:action="@{/logout}" method="post">
-					            <input class="btn btn-dark" type="submit" value="Sign Out" />
-				         </form> 
+                		  
 				         
                 	</ul>
                 </div>
@@ -124,7 +127,7 @@ lang="en">
             <div class="container-fluid p-0">
                 <div class="row g-0">
                     <div class="col-lg-4 col-sm-6">                                                                                    
-						<div class="container-custom">
+						<div class="portfolio-box container-custom">
 								<a  class="image-custom" th:href="@{/reports}"><img class="image-custom" src="assets/img/portfolio/thumbnails/today.jpg" /></a>
 						  		<div class="middle-custom">
 						  			  <div class="text">Click for prediction report</div>
@@ -132,14 +135,14 @@ lang="en">
 						</div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <div class="container-custom">
+                        <div class="portfolio-box container-custom">
 								<a  class="image-custom" th:href="@{/area_reports}"><img class="image-custom" src="assets/img/portfolio/thumbnails/area.jpg" /></a>
 						  		<div class="middle-custom">
 						  			  <div class="text">Area prediction for tomorrow</div>
 						  		</div>
 						</div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+               <!--       <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
                         
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
@@ -149,6 +152,7 @@ lang="en">
                             </div>
                         </a>
                     </div>
+              -->
            <!--          <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />

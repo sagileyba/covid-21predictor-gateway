@@ -37,15 +37,18 @@ lang="en">
 					    
                         <li class="nav-item"><a style="font-size: 20px" class="nav-link" href="#page-top">About</a></li>
                         <li class="nav-item"><a style="font-size: 20px" class="nav-link" href="#reports">reports</a></li>
-                   <!--  <li class="nav-item"><a style="font-size: 20px" class="nav-link" href="#portfolio">Portfolio</a></li>  -->    
                         <li class="nav-item"><a style="font-size: 20px" class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item">
+                        <form th:action="@{/logout}" method="post">
+					            <input  style="font-size: 20px;" class="nav-link-btn  btn btn-dark" type="submit" value="Sign Out" />
+				         </form> 
+                        </li>
+                        
                         <li class="nav-item"><a><b></b></a> <li>
                         </ul>    
                        <ul>          
                     	<!--  <button type="button" class="btn btn-dark">Welcome [[${#request.userPrincipal.principal.fullName}]]</button>  </li>  -->
-                		  <form th:action="@{/logout}" method="post">
-					            <input class="btn btn-dark" type="submit" value="Sign Out" />
-				         </form> 
+                		  
 				         
                 	</ul>
                 </div>

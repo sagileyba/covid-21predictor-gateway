@@ -34,36 +34,32 @@
  
  
  
-<div>
-<nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container px-4 px-xl-7">
-        <a style="font-size: 40px ;color:black;" class="navbar-brand" href="#page-top">Covid Prediction System</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-        	
-            <ul class="navbar-nav ms-auto my-2 my-lg-0" style="font-size: 40px !important;" >
- 
-                <li class="nav-item"><a><b></b></a> <li>
-                <li class="nav-item"><a style="font-size: 20px; color:black" class="nav-link" th:href="@{/index}">Home</a></li>
-                
-                </ul>    
-               <ul>          
-            	<!--  <button type="button" class="btn btn-dark">Welcome [[${#request.userPrincipal.principal.fullName}]]</button>  </li>  -->
-        		  <form th:action="@{/logout}" method="post">
-        			 <input class="btn btn-dark" type="submit" value="Sign Out" />
-    			 </form> 
-     
-        	  </ul>
-        </div>
-    </div>
-</nav>
-</div>
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 navbar-shrink" id="mainNav">
+	          <div class="container px-4 px-xl-7">
+	          
+	              <a style="font-size: calc(2vw + 2vh)" class="navbar-brand" href="#page-top">Covid Prediction System</a>	              	
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0" style="font-size: 40px !important;" >
+				    
+	          		    <li class="nav-item"><a style="font-size: 20px;" class="nav-link" th:href="@{/index}">Home</a></li>
+	
+	                   <li class="nav-item">
+	                      <form th:action="@{/logout}" method="post">
+				            <input  style="font-size: 20px;" class="nav-link-btn btn btn-dark" type="submit" value="Sign Out" />
+			    	      </form> 
+	                    </li>
+	                      
+	                      <li class="nav-item"><a><b></b></a> <li>
+	                </ul>    
+	
+	              </div>
+	          </div>
+     </nav>
 
-<div style="margin-top:200px"></div>
+<div style="padding-top: 150px;">
 
  <canvas id="pie-chart" width="400" height="450"></canvas>
     
-    
+    </div>
 
 
  
