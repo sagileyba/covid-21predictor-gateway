@@ -24,7 +24,7 @@ import com.philips.project.gateway.service.CustomUserDetailsService;
 @Controller
 @RequestMapping("/")
 public class APIGateway {
-    private static String updatedb_URL = "http://localhost:8082/person/updateResult";
+//    private static String updatedb_URL = "http://localhost:8081/report/";
     private static String report_URL = "https://covid21analytics.herokuapp.com/report/";
 
 
