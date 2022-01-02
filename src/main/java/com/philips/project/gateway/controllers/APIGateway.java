@@ -24,8 +24,10 @@ import com.philips.project.gateway.service.CustomUserDetailsService;
 @Controller
 @RequestMapping("/")
 public class APIGateway {
-//    private static String updatedb_URL = "http://localhost:8081/report/";
+//    private static String report_URL = "http://localhost:8081/report/";
+//    private static String nextweek_report_URL = "http://localhost:8081/report/nextweekpred";
     private static String report_URL = "https://covid21analytics.herokuapp.com/report/";
+    private static String nextweek_report_URL = "https://covid21analytics.herokuapp.com/report/nextweekpred";
 
 
     @Autowired
@@ -91,7 +93,7 @@ public class APIGateway {
 
     @GetMapping("/reports")
     public String listReports(Model model) {
-        ResponseEntity<JSONObject[]> respones = this.client.getForEntity(report_URL, JSONObject[].class);
+        ResponseEntity<JSONObject[]> respones = this.client.getForEntity(nextweek_report_URL, JSONObject[].class);
         List<String> date = new ArrayList<String>();
         List<String> accu = new ArrayList<String>();
 //        List<String> area = new ArrayList<String>();
